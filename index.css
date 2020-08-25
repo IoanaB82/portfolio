@@ -641,7 +641,7 @@ h3.section-header  {
     width: 600px;
     height: 390px;
     
-    background: url(images/totoro_600.png);
+    background: url(./images/totoro_600.png);
     opacity: 1;
  
     background-repeat: no-repeat;
