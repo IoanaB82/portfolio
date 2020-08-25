@@ -494,7 +494,7 @@ h2 {
 .about-img {
     width: 600px;
     box-sizing: border-box;
-    background-image: url('images/DSC_4634.jpg');
+    background-image: url('/images/DSC_4634.jpg');
     background-repeat: no-repeat;
     background-size:cover;
     align-self: auto;
