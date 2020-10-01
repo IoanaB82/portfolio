@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"
+        integrity="sha512-LfB+BcvR3zBt7ebVskhSWiSbEUiG3p5EcCprkieldsKhBeR6wpnLi0VpWC2GNgVGWP2n/skO8Bx2oKNjUhXCkw=="
+        crossorigin="anonymous"></script>
+
+    <title>Ioana's Webdev Portfolio</title>
+</head>
+
+<body class="container">
+    <div class="navigation">
+        <!--    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+
+            <span class="navigation__icon">
+
+            </span>
+
+        </label>-->
+        <div class="navigation__site-title">
+            <h2 class="heading-secondary" id="page-title"><a href="/">Ioana's Webdev Portfolio</a></h2>
+        </div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="#about" class="navigation__link">About</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#projects" class="navigation__link">Projects</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#contact" class="navigation__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <header class="header">
+        <div class="scene">
+            <h1 class="scene__title">jumping frog</h1>
+            <div class="scene__sky">
+                <div class="scene__cloud scene__cloud--1" id="cloud1">
+                    <svg viewBox="0 0 1200 600" id="cloud-1">
+                        <path fill="white" stroke="blue" stroke-width="2"
+                            d="M 344 326 Q 351 232 438 225 C 456 121 744 111 776 179 A 50 50 0 1 1 916 394 C 925 432 896 510 785 461 C 660 540 598 525 492 441 C 475 508 265 452 352 358 Z" />
+                    </svg>
+                    <!-- should instert rain here-->
+                </div>
+                <div class="scene__cloud scene__cloud--2" id="cloud2">
+                    <svg viewBox="0 0 1200 600" id="cloud-2">
+                        <path fill="white" stroke="blue" stroke-width="2"
+                            d="M 344 326 Q 351 232 438 225 C 456 121 744 111 776 179 A 50 50 0 1 1 916 394 C 925 432 896 510 785 461 C 660 540 598 525 492 441 C 475 508 265 452 352 358 Z" />
+                    </svg>
+                    <!-- should instert rain here-->
+                </div>
+                <div class="scene__cloud scene__cloud--3" id="cloud3">
+                    <svg viewBox="0 0 1200 600" id="cloud-3">
+                        <path fill="white" stroke="blue" stroke-width="2"
+                            d="M 344 326 Q 351 232 438 225 C 456 121 744 111 776 179 A 50 50 0 1 1 916 394 C 925 432 896 510 785 461 C 660 540 598 525 492 441 C 475 508 265 452 352 358 Z" />
+                    </svg>
+                    <!-- should instert rain here-->
+                </div>
+                <div class="scene__cloud scene__cloud--4" id="cloud4">
+                    <svg viewBox="0 0 1200 600" id="cloud-4">
+                        <path fill="white" stroke="blue" stroke-width="2"
+                            d="M 344 326 Q 351 232 438 225 C 456 121 744 111 776 179 A 50 50 0 1 1 916 394 C 925 432 896 510 785 461 C 660 540 598 525 492 441 C 475 508 265 452 352 358 Z" />
+                    </svg>
+                    <!-- should instert rain here-->
+                </div>
+
+            </div>
+
+            <div class="scene__earth">
+                <button class="btn btn-stop" value="stop" id="stop">Stop the frog</button>
+                <button class="btn btn-more" id="more" value="more">More frogs</button>
+                <div class="scene__motion-path">
+                    <div class="scene__frog" id="frog">
+                        <img id="frog-1" src="img/giphy1_v1.gif" class="frog__img"/>
+
+                    </div>
+
+                    <svg class="scene__path" viewBox="0 0 1440 320">
+                        <path id="hills" fill-opacity="0"
+                            d="M0,128L24,138.7C48,149,96,171,144,181.3C192,192,240,192,288,170.7C336,149,384,107,432,101.3C480,96,528,128,576,117.3C624,107,672,53,720,69.3C768,85,816,171,864,208C912,245,960,235,1008,208C1056,181,1104,139,1152,117.3C1200,96,1248,96,1296,106.7C1344,117,1392,139,1416,149.3L1440,160">
+                        </path>
+                    </svg>
+
+
+
+                </div>
+
+                <svg viewBox="0 0 1440 320" class="scene__decor">
+                    <g class="scene__decor-hills">
+
+                        <path fill="darkgreen" fill-opacity="1" d="M0,64L12,96C24,128,48,192,72,224C96,256,120,256,144,213.3C168,171,192,
+                85,216,85.3C240,85,264,171,288,197.3C312,224,336,192,360,160C384,128,408,96,432,90.7C456,85,480,107,504,106.7C528,
+                107,552,85,576,69.3C600,53,624,43,648,53.3C672,64,696,96,720,101.3C744,107,768,85,792,112C816,139,840,213,864,
+                218.7C888,224,912,160,936,128C960,96,984,96,1008,112C1032,128,1056,160,1080,165.3C1104,171,1128,149,1152,144C1176,
+                139,1200,149,1224,176C1248,203,1272,245,1296,224C1320,203,1344,117,1368,74.7C1392,32,1416,32,1428,32L1440,32L1440,
+                320L1428,320C1416,320,1392,320,1368,320C1344,320,1320,320,1296,320C1272,320,1248,320,1224,320C1200,320,1176,320,1152,
+                320C1128,320,1104,320,1080,320C1056,320,1032,320,1008,320C984,320,960,320,936,320C912,320,888,320,864,320C840,320,816,
+                320,792,320C768,320,744,320,720,320C696,320,672,320,648,320C624,320,600,320,576,320C552,320,528,320,504,320C480,320,456,320,
+                432,320C408,320,384,320,360,320C336,320,312,320,288,320C264,320,240,320,216,320C192,320,168,320,144,320C120,320,96,320,
+                72,320C48,320,24,320,12,320L0,320Z"></path>
+
+                        <path fill="yellowgreen" fill-opacity="1" d="M0,96L18.5,85.3C36.9,75,74,53,111,42.7C147.7,32,185,32,222,69.3C258.5,107,
+                295,181,332,181.3C369.2,181,406,107,443,106.7C480,107,517,181,554,186.7C590.8,192,628,128,665,117.3C701.5,107,738,149,
+                775,160C812.3,171,849,149,886,154.7C923.1,160,960,192,997,176C1033.8,160,1071,96,1108,74.7C1144.6,53,1182,75,1218,
+                90.7C1255.4,107,1292,117,1329,149.3C1366.2,181,1403,235,1422,261.3L1440,288L1440,320L1421.5,320C1403.1,320,1366,320,1329,
+                320C1292.3,320,1255,320,1218,320C1181.5,320,1145,320,1108,320C1070.8,320,1034,320,997,320C960,320,923,320,886,320C849.2,
+                320,812,320,775,320C738.5,320,702,320,665,320C627.7,320,591,320,554,320C516.9,320,480,320,443,320C406.2,320,369,320,332,
+                320C295.4,320,258,320,222,320C184.6,320,148,320,111,320C73.8,320,37,320,18,320L0,320Z"></path>
+
+                        <defs>
+                            <linearGradient id="RadialGradient2" x1="0" x2="0" y1="0" y2="1">
+                                <stop offset="0%" stop-color="#F0D94D" />
+                                <stop offset="50%" stop-color="#58EB9D" />
+                                <stop offset="100%" stop-color="#58EB9D" />
+                            </linearGradient>
+
+                        </defs>
+
+                        <path fill="url(#RadialGradient2)" fill-opacity="1"
+                            d="M0,128L24,138.7C48,149,96,171,144,181.3C192,192,240,192,288,170.7C336,149,384,107,432,101.3C480,96,528,128,576,117.3C624,107,672,53,720,69.3C768,85,816,171,864,208C912,245,960,235,1008,208C1056,181,1104,139,1152,117.3C1200,96,1248,96,1296,106.7C1344,117,1392,139,1416,149.3L1440,160L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z">
+                        </path>
+                    </g>
+                    <g>
+                        <g class="scene__decor-leaf" id="leaf-1">
+                            <path id="fr2-bottom-right" class="shp0" fill="#1f671f"
+                                d="M1202 200.13C1187.85 101.05 1231 112.87 1269 81C1307 49.13 1289 59.87 1334 45C1379 30.13 1389 27.88 1396 23C1403 18.13 1400 1.88 1407 44C1414 86.12 1423 86.87 1414 132C1405 177.13 1421 168.87 1396 197C1371 225.13 1359 234.87 1337 248C1315 261.13 1321 272.88 1293 268C1265 263.13 1235 262.88 1235 248C1235 233.13 1209 249.12 1202 200.13Z" />
+                            <path id="fr2-bottom-right-line" class="shp1" fill="#bbc70d"
+                                d="M1239.53 241.65L1233 239.37C1233 239.37 1241.22 231.47 1253.43 217.47C1259.64 209.83 1267.02 200.55 1275.08 190.32C1283.16 179.98 1291.58 169.03 1299.6 158.32C1307.15 147.91 1314.34 137.67 1321.03 127.98C1328 117.93 1335.02 107.99 1341.57 98.96C1356.16 79.66 1366.95 66.39 1366.95 66.39L1390.43 49.02C1390.43 49.02 1371.99 68.48 1349.09 95.25C1339.93 106.8 1331.11 118.59 1323.56 129.43C1317.35 138.96 1311.38 148.37 1305.31 157.69C1298.62 167.38 1291.15 177.6 1283.52 187.6C1275.52 197.84 1267.92 207.43 1261.41 215.57C1248.41 231.41 1239.53 241.65 1239.53 241.65Z" />
+                        </g>
+                        <g class="scene__decor-leaf">
+                            <path id="fr2-bottom-right copy" class="shp0" fill="#1f671f"
+                                d="M398.01 238.38C385.78 138.82 368.22 140.71 351.7 99.52C337.14 58.59 345.04 74.07 320.89 45.7C291.43 16.82 284.03 11.36 279.16 4.61C274.11 -2.16 278.89 -15.91 268.42 19.59C261.3 52.99 255.63 50.65 259.53 88.64C259.86 125.51 254.11 112.17 260.48 144.67C264.88 180.28 268 195.22 276.53 219.33C287.3 244.2 277.55 251.98 303.38 263.68C332.29 275.14 365.61 291.59 366.99 275.92C367.81 260.4 397.25 289.5 398.01 238.38Z" />
+                            <path id="fr2-bottom-right-line copy" class="shp1" fill="#bbc70d"
+                                d="M356.86 257.53L363.77 257.69C363.77 257.69 358.85 247.4 352.33 230.01C349.2 220.68 345.54 209.4 341.58 196.99C337.65 184.47 333.61 171.26 329.86 158.42C326.45 146.02 323.3 133.9 320.44 122.49C317.44 110.63 314.35 98.85 311.4 88.1C304.5 64.91 299.06 48.69 299.06 48.69L283.17 24.19C283.17 24.19 293.61 48.88 305.65 81.98C310.18 96.02 314.3 110.15 317.56 122.96C320.03 134.06 322.32 144.97 324.73 155.83C327.6 167.24 331.01 179.43 334.64 191.48C338.53 203.88 342.28 215.52 345.53 225.43C352.14 244.83 356.86 257.53 356.86 257.53Z" />
+                        </g>
+                        <g class="scene__decor-leaf">
+                            <path id="fr2-bottom-right copy 2" class="shp2" fill="#308a30"
+                                d="M717.75 175.02C727.29 119.39 735.69 120.73 748.18 99.88C764.56 81.31 755.77 87.71 781.72 78.22C815.54 71.68 823.28 70.86 828.25 68.66C832.9 66.31 828.87 58.39 838.74 79.26C846.61 99.53 853.28 100.48 846.9 118.69C842.9 136.87 851.39 132.67 839.97 145.95C830.99 161.77 826.17 168.22 815.44 178.27C803.55 189.01 813.32 194.65 787.66 196.74C762.2 199.39 736.72 206.38 736.43 197.47C736.22 188.57 717.11 205.83 717.75 175.02Z" />
+                            <path id="fr2-bottom-right-line copy 2" class="shp3" fill="#72966c"
+                                d="M742.22 189.37L736.8 188.4C736.8 188.4 741.74 183.55 748.69 175.06C752.14 170.45 756.2 164.86 760.62 158.7C765.03 152.47 769.6 145.88 773.9 139.46C777.89 133.21 781.64 127.09 785.1 121.3C788.71 115.29 792.38 109.34 795.84 103.93C803.7 92.34 809.68 84.33 809.68 84.33L824.72 73.4C824.72 73.4 813.92 85.27 800.98 101.48C795.94 108.44 791.21 115.51 787.29 122C784.18 127.67 781.23 133.27 778.18 138.83C774.73 144.61 770.76 150.74 766.64 156.75C762.27 162.92 758.09 168.7 754.5 173.6C747.26 183.17 742.22 189.37 742.22 189.37Z" />
+                        </g>
+                        <g class="scene__decor-leaf">
+                            <path id="fr2-bottom-right copy 4" class="shp2" fill="#308a30"
+                                d="M650.22 15.31C701.59 38.67 698.16 46.46 715.15 63.85C728.95 84.41 725 74.27 727.57 101.79C725.3 136.15 724.12 143.86 724.99 149.22C726.09 154.31 734.77 152.43 712.07 156.67C690.47 159.13 687.85 165.34 671.86 154.54C655.3 146.04 657.2 155.33 647.26 140.91C634.24 128.2 629.22 121.9 622.23 108.96C614.87 94.74 606.94 102.75 611.44 77.41C615.34 52.11 615.07 25.68 623.75 27.67C632.41 29.72 620.58 6.85 650.22 15.31Z" />
+                            <path id="fr2-bottom-right-line copy 4" class="shp3" fill="#72966c"
+                                d="M630.11 35.32L632.43 30.33C632.43 30.33 635.87 36.35 642.31 45.23C645.9 49.73 650.27 55.08 655.1 60.92C660.01 66.77 665.21 72.86 670.34 78.66C675.36 84.1 680.33 89.29 685.05 94.1C689.94 99.12 694.76 104.18 699.12 108.9C708.33 119.45 714.56 127.28 714.56 127.28L721.31 144.6C721.31 144.6 712.57 131.14 700.19 114.5C694.73 107.86 689.09 101.49 683.81 96.05C679.12 91.59 674.45 87.31 669.86 82.96C665.14 78.14 660.22 72.75 655.45 67.23C650.6 61.44 646.07 55.93 642.24 51.21C634.83 41.78 630.11 35.32 630.11 35.32Z" />
+                        </g>
+                        <g class="scene__decor-leaf">
+                            <path id="fr2-bottom-right copy 3" class="shp2" fill="#308a30"
+                                d="M52.56 181.14C50.88 110.04 61.59 109.66 72 80.86C87.75 53.92 78.42 63.96 108.22 45.94C148.46 29.67 157.84 26.78 163.45 22.86C168.62 18.82 161.73 10 178.99 33.42C193.62 56.58 202.11 56.14 198.62 80.2C198.08 103.66 207.57 96.4 196.66 115.6C189.39 137.33 184.99 146.48 174.15 161.51C162.05 177.66 175.5 182.27 144.28 191.07C113.43 200.52 83.61 215.33 81.1 204.38C78.68 193.43 59.23 219.4 52.56 181.14Z" />
+                            <path id="fr2-bottom-right-line copy 3" class="shp3" fill="#72966c"
+                                d="M86.29 192.97L79.35 193.08C79.35 193.08 84.3 185.88 90.84 173.69C93.97 167.16 97.65 159.26 101.62 150.57C105.56 141.81 109.62 132.56 113.38 123.56C116.81 114.88 119.96 106.4 122.83 98.4C125.84 90.1 128.94 81.85 131.91 74.32C138.82 58.08 144.28 46.73 144.28 46.73L160.23 29.57C160.23 29.57 149.75 46.86 137.67 70.04C133.13 79.87 128.99 89.76 125.72 98.73C123.24 106.5 120.94 114.15 118.52 121.75C115.65 129.74 112.23 138.28 108.59 146.72C104.68 155.4 100.92 163.55 97.66 170.49C91.03 184.07 86.29 192.97 86.29 192.97Z" />
+                        </g>
+                        <g class="scene__decor-leaf">
+                            <path id="fr1-bottom-right" class="shp4" fill="#3f9e2f"
+                                d="M1307.45 290.05C1266.09 236.51 1295.41 229.07 1307.13 197.65C1318.85 166.23 1311.85 178.56 1333.35 154.8C1354.85 131.04 1359.99 126.39 1362.48 121.18C1364.97 115.98 1357.78 107.43 1375.95 129.87C1394.11 152.31 1399.66 149.75 1409.41 179.29C1419.17 208.83 1425.83 198.64 1420.51 223.52C1415.18 248.4 1411.38 258.13 1402.81 273.19C1394.25 288.24 1401.7 293.15 1383.61 299.62C1365.51 306.1 1347.79 315.95 1342.83 307.21C1337.87 298.46 1327.91 316.54 1307.45 290.05Z" />
+                            <path id="fr1-bottom-right-line" class="shp0" fill="#1f671f"
+                                d="M1345.93 298.38L1339.39 303.75C1339.39 303.75 1341.81 291.38 1345.6 274.61C1347.52 266.84 1349.78 258.16 1352.15 249.23C1354.45 240.56 1356.75 231.52 1358.84 222.61C1360.66 213.72 1362.13 204.77 1363.15 196.23C1363.78 187.43 1363.99 178.86 1363.87 171.14C1362.79 154.17 1361.51 141.24 1361.51 141.24L1365.56 130.93C1365.56 130.93 1367.1 147.05 1368.56 167.26C1368.87 176.08 1368.84 185.59 1368.38 195.1C1367.48 204.12 1366.09 213.37 1364.32 222.4C1362.25 231.33 1359.97 240.25 1357.69 248.67C1355.37 257.21 1353.2 265.37 1351.39 272.54C1347.97 287.61 1345.93 298.38 1345.93 298.38Z" />
+                        </g>
+                        <g class="scene__decor-leaf">
+                            <path id="fr1-bottom-right copy" class="shp5" fill="#4ac435"
+                                d="M68.26 155.92C27.83 146.48 38.89 131.58 32.29 112.09C25.68 92.61 27.13 101.18 28.15 81.55C29.17 61.91 29.81 57.71 28.98 54.27C28.15 50.83 21.41 49.55 38.75 53.18C56.09 56.81 57.73 53.45 73.82 63.71C89.91 73.98 89.13 66.56 96.24 80.45C103.35 94.35 105.31 100.45 107.08 110.93C108.84 121.41 114.28 120.86 108.19 130.95C102.09 141.04 97.48 152.6 91.73 150.36C85.98 148.13 88.25 160.58 68.26 155.92Z" />
+                            <path id="fr1-bottom-right-line copy" class="shp0" fill="#1f671f"
+                                d="M89.79 144.96L88.75 150.05C88.75 150.05 85.11 143.23 80.41 133.79C78.32 129.35 76.03 124.35 73.69 119.17C71.43 114.16 69.02 108.97 66.56 103.92C63.97 98.99 61.21 94.16 58.38 89.7C55.27 85.27 52.05 81.12 49 77.49C41.91 69.84 36.29 64.18 36.29 64.18L34.22 57.71C34.22 57.71 41.2 64.78 49.73 73.83C53.29 77.9 56.97 82.44 60.43 87.14C63.5 91.78 66.42 96.72 69.08 101.7C71.56 106.75 73.93 111.87 76.11 116.76C78.32 121.73 80.45 126.44 82.36 130.56C86.58 139.05 89.79 144.96 89.79 144.96Z" />
+                        </g>
+
+
+
+                </svg>
+
+            </div>
+        </div>
+        </div>
+
+
+        </div>
+    </header>
+    <main>
+        <section class="about" id="about">
+            <h1 class="about__heading heading-primary">About</h1>
+            <span class="about__btn-back btn-back"><a href="#page-title"><img class="back-img" src="img/icons8-up-arrow-100.png"><h5>Top</h5></a></span>
+            <div class="about__content">
+                <p>My name is Ioana Bancu and I am a junior developer.
+                    I have knowledge in HTML, SCSS, Javascript, and I am currently familiarizing with React.
+                    I am a self-taught person, curious and ambitious.
+                    <br/>
+                    I like to listen to music, read fantasy books, wander in nature looking for birds and taking photos.</p>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <h1 class="projects__heading heading-primary">Projects</h1>
+            <span class="projects__btn-back btn-back"><a href="#page-title"><img class="back-img" src="img/icons8-up-arrow-100.png"><h5>Top</h5></a></span>
+            <div class="projects__content">
+
+                <div class="card card-1">
+                    <div class="card__side card__side--front">
+                        <div class="card__picture card__picture--1">
+
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__cta">
+                            <h4 class="card__heading u-margin-bottom-small">
+                                <span class="card__heading-span card__heading-span--1">Artist Portfolio Website</span>
+                            </h4>
+                            <div class="card__details u-margin-bottom-small">
+                                <p>This website uses Bootstrap and javascript for
+                                    implementing some functionalities: filtering menu, modal, back to top button.</p>
+                            </div>
+                            <a href="https://mariavalentir.com/" class="btn">To website</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-2">
+                    <div class="card__side card__side--front">
+                        <div class="card__picture card__picture--2">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__cta">
+                            <h4 class="card__heading u-margin-bottom-small">
+                                <span class="card__heading-span card__heading-span--1">Count with ladybug</span>
+                            </h4>
+                            <div class="card__details u-margin-bottom-small">
+                                <p>This project is inspired by my 4 years old daughter who likes to count. Project is
+                                    made for practicing javascript. </p>
+                            </div>
+                            <a href="#popup-ladybug" class="btn btn-primary">Play</a>
+                            <a href="https://github.com/IoanaB82/ladybug_counter" class="btn btn-secondary">Check Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-3">
+                    <div class="card__side card__side--front">
+                        <div class="card__picture card__picture--3">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__cta">
+                            <h4 class="card__heading u-margin-bottom-small">
+                                <span class="card__heading-span card__heading-span--1">Totoro in the rain</span>
+                            </h4>
+                            <div class="card__details u-margin-bottom-small">
+                                <p>Small CSS project made for fun to explore keyframe animations and some Photoshop editing. Simple, but effective. Kids love it.</p>
+                            </div>
+                            <a href="#popup-totoro" class="btn btn-primary btn-primary-totoro">Shake Totoro</a>
+                            <a href="https://github.com/IoanaB82/totoro-in-rain" class="btn btn-secondary btn-secondary-totoro">Check Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-4">
+                    <div class="card__side card__side--front">
+                        <div class="card__picture card__picture--4">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__cta">
+                            <h4 class="card__heading u-margin-bottom-small">
+                                <span class="card__heading-span card__heading-span--1">Let it rain</span>
+                            </h4>
+                            <div class="card__details u-margin-bottom-small">
+                                <p> A small project that explores javascript and CSS animation.</p> </p>
+                            </div>
+                            <a href="https://github.com/IoanaB82/let-it-rain" class="btn">Check Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-5">
+                    <div class="card__side card__side--front">
+                        <div class="react card__picture card__picture--5">
+                            <div class="react__line">
+                                <div class="react__img"><img src="img/react-2-458175.png"></div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__cta">
+                            <h4 class="card__heading u-margin-bottom-small">
+                                <span class="card__heading-span card__heading-span--1">React</span>
+                            </h4>
+                            <div class="card__details u-margin-bottom-small">
+                                <p>Comming soon...</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-6">
+                    <div class="card__side card__side--front">
+                        <div class="card__picture card__picture--6">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__cta">
+                            <h4 class="card__heading u-margin-bottom-small">
+                                <span class="card__heading-span card__heading-span--1">Jumping frog</span>
+                            </h4>
+                            <div class="card__details u-margin-bottom-small">
+                                <p>Animation made with animejs.</p>
+                            </div>
+                            <a href="https://github.com/IoanaB82/jumping-frog" class="btn">Check Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="contact" id="contact">
+            <h1 class="contact__heading heading-primary">Contact me</h1>
+            <span class="contact__btn-back btn-back"><a href="#page-title"><img class="back-img" src="img/icons8-up-arrow-100.png"><h5>Top</h5></a></span>
+            <div class="contact__content">
+                <h3 class="heading-tertiary contact__content--heading">Send a Hi or Hire Me</h3>
+                <p class="contact__content--data">
+                    <span>ioana.valentir[at]gmail.com</span>
+                    <span><a href="https://www.linkedin.com/in/ioana-cristina-bancu-a28b356a/">Linkedin</a></span>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"></footer>
+    <div class="popup" id="popup-ladybug">
+        <div class="popup__title">
+            <h1 class="heading-primary">Count with ladybug</h1>
+        </div>
+        <a href="#projects" class="popup__close">&times;</a>
+        <div class="popup__container popup__container-ladybug">
+
+            <div class="ladybug__messages">
+                <div id="message" class="hidden">
+                    <p></p>
+                </div>
+                <div id="tries">
+                    <h3 class="heading-tertiary"></h3>
+                </div>
+            </div>
+            <div class="ladybug__background">
+                <canvas id="ladybug" width="180" height="180">
+                </canvas>
+            </div>
+
+            <button id="start" class="ladybug__start-button btn">New game</button>
+            <div id="answer" class="ladybug__answer">
+                <div class="box box-1">1</div>
+                <div class="box box-2">2</div>
+                <div class="box box-3">3</div>
+                <div class="box box-4">4</div>
+                <div class="box box-5">5</div>
+                <!--  <div class="break"></div>-->
+                <div class="box box-6">6</div>
+                <div class="box box-7">7</div>
+                <div class="box box-8">8</div>
+                <div class="box box-9">9</div>
+                <div class="box box-10">10</div>
+            </div>
+
+        </div>
+
+        <div class="popup__cta"><a class="btn" href="https://github.com/IoanaB82/ladybug_counter">Check code</a></div>
+        <script src="js/ladybug.js"></script>
+
+    </div>
+
+    <div class="popup" id="popup-totoro">
+        <div class="popup__title">
+            <h1 class="heading-primary">Totoro in the rain</h1>
+        </div>
+        <a href="#projects" class="popup__close">&times;</a>
+        <div class="popup__container popup__container-totoro">
+            <div class="totoro__scene">
+                <img src="img/totoro_bg1.jpg" alt="">
+               <div class="totoro__img">
+                  
+                    <div class="totoro__rain">
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="popup__cta"><a class="btn" href="https://github.com/IoanaB82/totoro-in-rain">Check code</a></div>
+
+
+
+    </div>
+    <script src="js/hero.js"></script>
+</body>
+
+</html>
